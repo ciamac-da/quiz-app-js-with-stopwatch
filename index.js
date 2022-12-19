@@ -17,3 +17,15 @@ const quiz = {
     currentQuestionIndex: 0,
     score: 0
 };
+
+const startStopwatch = () => {
+    stopwatchInterval = setInterval(()=> {
+        stopwatchTime++;
+        updateStopwatchDisplay();
+    }, 1000)
+}
+
+const updateStopwatchDisplay = () => {
+    const stopwatchDisplay = document.getElementById("stopwatch-display");
+    stopwatchDisplay.textContent = stopwatchTime
+}
